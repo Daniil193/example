@@ -1,0 +1,46 @@
+﻿ОСНОВНЫЕ КОМАНДЫ
+
+git status — показывает нужно ли закоммитить какие-то изменения в файлах
+
+git add (название файла с расширением) — проиндексировать указанный файл
+git rm text.txt    #  удалить отслеживаемый неизменённый файл и проиндексировать это изменение
+
+
+git commit -a(все файлы) -m(все изменения) — закомитить изменения   перед отправкой
+  
+git commit -a -m "Add new file and rewrite file as add one more time Hello World!"
+
+git push origin — применить изменения к репозиторию на гитхаб 
+
+git log — просмотреть журнал изменений
+
+РАБОТА С ВЕТКАМИ
+git branch -a  - узнать в какой ветке находимся
+
+git branch (name_branch) — создать новую ветку
+
+git branch pool
+но чтобы перейти на созданную ветку нужно ввести:
+
+git checkout (name branch) — перейти на другую ветку
+
+git checkout pool
+
+git push origin pool  - загрузили файл в ветку «pool»
+
+Чтобы добавить файл из ветки pool в master надо:
+1) - перейти на ветку мастер
+git checkout master
+2) — сделать слияние ветки pool в ветку master:
+git merge pool
+3) — передаем изменения на гитхаб
+git push origin
+
+
+git branch -d pool — удаляем ненужную ветку в локальном репозитории
+
+git push origin --delete pool  — удаляем ветку в репозитории гитхаба
+
+
+
+
